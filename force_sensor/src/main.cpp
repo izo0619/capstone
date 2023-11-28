@@ -8,7 +8,7 @@ int sensorValues[numSensors] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115200);
     analogReadResolution(12);
 }
 
@@ -36,6 +36,7 @@ int sensorToResistance(int pin)
     }
     r_s = (4095 - sensorValue) * r / sensorValue;
     return r_s;
+    // return sensorValue;
 }
 
 float resistanceToForce(int resistance)
@@ -64,5 +65,5 @@ void loop()
 {
     readAllSensors();
     printAllSensors();
-    delay(100);
+    delay(10);
 }
