@@ -5,9 +5,9 @@ import csv
 ser = serial.Serial("/dev/cu.usbserial-0001", 115200)
 
 # Create a CSV file and write the header
-csv_file = open('sensor_data_force_1_100Hz.csv', 'w', newline='')
+csv_file = open('matrix_data_ct_test3.csv', 'w', newline='')
 csv_writer = csv.writer(csv_file)
-header = ['Time'] + [f'Sensor_{i}' for i in range(1, 10)]
+header = ['Time'] + [f'Sensor_{i}' for i in range(9)]
 csv_writer.writerow(header)
 
 try:
