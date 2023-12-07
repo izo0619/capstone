@@ -1,0 +1,9 @@
+Paired t-test results:
+T-statistic: -3.465613994400811
+P-value: 0.00849734769258877
+The difference between the groups is statistically significant.
+
+One-way ANOVA results:
+F-statistic: 0.38065086170546325
+P-value: 0.941188371265827
+There is no significant difference among the groups.
