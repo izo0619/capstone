@@ -5,7 +5,7 @@ import csv
 ser = serial.Serial("/dev/cu.usbserial-0001", 115200)
 
 # Create a CSV file and write the header
-csv_file = open('matrix_data_board2.csv', 'w', newline='')
+csv_file = open('thickStrap.csv', 'w', newline='')
 csv_writer = csv.writer(csv_file)
 header = ['Time'] + [f'Sensor_{i}' for i in range(9)]
 csv_writer.writerow(header)

@@ -70,17 +70,17 @@ labels_x = ['s0','s1','s2','s3','s4','s5','s6','s7','s8']
 plt.figure()
 plt.bar(r,ct_median, yerr = ct_err, width = 0.2, color = 'blue')
 plt.bar(r + width,corset_median,yerr=corset_err, width = 0.2, color = 'red')
-plt.bar(r + width*2,board_median, yerr = board_err, width = 0.2, color = 'green')
+# plt.bar(r + width*2,board_median, yerr = board_err, width = 0.2, color = 'green')
 plt.axhline(y=0, color = 'black')
 plt.xticks(r + width/2, labels_x)
 plt.ylabel('grams_force [g]')
 plt.xlabel('Sensor')
 plt.title('Average Amplitude')
-colors = {'CT':'blue', 'Corset':'red', 'Board':'green'}         
+colors = {'CT':'blue', 'Corset':'red'}         
 labels = list(colors.keys())
 handles = [plt.Rectangle((0,0),1,1, color=colors[label]) for label in labels]
 plt.legend(handles, labels)
-plt.savefig('Average Amplitude.png')
+plt.savefig('Average Amplitude CT - Corset.png')
 plt.show()
 
 
